@@ -1,0 +1,14 @@
+{
+  "name": "mailrun",
+  "version": "1.0.0",
+  "description": "Frappe app to manage newsletters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cd dashboard && yarn dev",
+    "build": "cd dashboard && yarn build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
