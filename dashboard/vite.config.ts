@@ -16,7 +16,7 @@ export default defineConfig({
 		}
 	},
 	build: {
-		outDir: '../mailrun/public/dashboard',
+		outDir: '../mailrun/public/mailrun',
 		emptyOutDir: true,
 		target: 'es2015',
 	},

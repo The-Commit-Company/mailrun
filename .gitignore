@@ -5,3 +5,8 @@
 tags
 node_modules
 __pycache__
+
+dist/
+mailrun/public/mailrun
+mailrun/public/node_modules
+mailrun/www/mailrun.html

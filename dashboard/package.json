@@ -1,14 +1,14 @@
 {
-  "name": "dashboard",
+  "name": "mailrun-web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/assets/mailrun/dashboard/ && yarn copy-html-entry",
+    "build": "vite build --base=/assets/mailrun/mailrun/ && yarn copy-html-entry",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "copy-html-entry": "cp ../mailrun/public/dashboard/index.html ../mailrun/www/dashboard.html"
+    "copy-html-entry": "cp ../mailrun/public/mailrun/index.html ../mailrun/www/mailrun.html"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
