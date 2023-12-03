@@ -9,12 +9,10 @@ import {
     ListOrdered,
     TextIcon,
     Code,
-    CheckSquare,
 } from "lucide-react";
 import { Dispatch, FC, SetStateAction } from "react";
 import { BubbleMenuItem } from ".";
-import { Popover } from "@/components/ui/popover";
-import { PopoverContent, PopoverTrigger } from "@radix-ui/react-popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 interface NodeSelectorProps {
     editor: Editor;
@@ -56,12 +54,6 @@ export const NodeSelector: FC<NodeSelectorProps> = ({
             icon: Heading3,
             command: () => editor.chain().focus().toggleHeading({ level: 3 }).run(),
             isActive: () => editor.isActive("heading", { level: 3 }),
-        },
-        {
-            name: "To-do List",
-            icon: CheckSquare,
-            command: () => editor.chain().focus().toggleTaskList().run(),
-            isActive: () => editor.isActive("taskItem"),
         },
         {
             name: "Bullet List",

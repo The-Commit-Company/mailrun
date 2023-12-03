@@ -18,35 +18,38 @@ export const defaultExtensions = [
     StarterKit.configure({
         bulletList: {
             HTMLAttributes: {
-                class: "list-disc list-outside leading-3 -mt-2",
+                style: "list-style-type: disc; list-style-position: outside; line-height: 12px; ",
+                class: "mailrun",
             },
         },
         orderedList: {
             HTMLAttributes: {
-                class:
-                    "list-decimal list-outside leading-3 -mt-2",
+                style: "list-style-type: deciaml; list-style-position: outside; line-height: 12px;",
+                class: "mailrun",
             },
         },
         listItem: {
             HTMLAttributes: {
-                class: "leading-normal -mb-2",
+                style: "line-height: 1.5;",
+                class: "mailrun",
             },
         },
         blockquote: {
             HTMLAttributes: {
-                class: "border-l-4 border-stone-700",
+                style: "border-left: 4px solid rgb(214 211 209); padding-left: 8px;",
+                class: "mailrun"
             },
         },
         codeBlock: {
             HTMLAttributes: {
                 class:
-                    "rounded-sm bg-stone-100 p-5 font-mono font-medium text-stone-800",
+                    "mailrun rounded-sm bg-stone-100 p-5 font-mono font-medium text-stone-800",
             },
         },
         code: {
             HTMLAttributes: {
                 class:
-                    "rounded-md bg-stone-200 px-1.5 py-1 font-mono font-medium text-stone-900",
+                    "mailrun rounded-md bg-stone-200 px-1.5 py-1 font-mono font-medium text-stone-900",
                 spellcheck: "false",
             },
         },
@@ -55,10 +58,17 @@ export const defaultExtensions = [
             width: 4,
         },
         gapcursor: false,
+        horizontalRule: false,
+        paragraph: {
+            HTMLAttributes: {
+                class: "mailrun",
+            },
+        },
         heading: {
             levels: [1, 2, 3],
             HTMLAttributes: {
-                class: "text-xl font-semibold",
+                // style: "",
+                class: "mailrun",
             }
         }
     }),

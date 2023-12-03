@@ -6,6 +6,7 @@ import { Newsletter } from '@/types/Newsletter'
 import { useFrappeGetDoc } from 'frappe-react-sdk'
 import { FormProvider, useForm } from 'react-hook-form'
 import { useParams } from 'react-router-dom'
+import { Editor as EditorClass } from "@tiptap/core";
 
 export const NewsletterEditor = () => {
 
@@ -30,7 +31,9 @@ const NewsletterEditorContent = ({ newsletter }: { newsletter: Newsletter }) => 
         console.log(data)
     }
 
-    const onEditorUpdate = (editor) => {
+    const onEditorUpdate = (editor?: EditorClass) => {
+
+        console.log(editor?.getHTML())
 
     }
     return <form onSubmit={methods.handleSubmit(onSubmit)}>

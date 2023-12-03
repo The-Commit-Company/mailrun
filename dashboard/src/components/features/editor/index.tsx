@@ -34,6 +34,7 @@ export default function Editor({
      * A list of extensions to use for the editor, in addition to the default extensions.
      * Defaults to [].
      */
+    extensions?: Extensions;
     /**
      * Props to pass to the underlying Tiptap editor, in addition to the default editor props.
      * Defaults to {}.
