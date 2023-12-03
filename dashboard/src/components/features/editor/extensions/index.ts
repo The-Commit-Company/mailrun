@@ -68,7 +68,7 @@ export const defaultExtensions = [
             levels: [1, 2, 3],
             HTMLAttributes: {
                 // style: "",
-                class: "mailrun",
+                class: "mailrun text-xl font-bold",
             }
         }
     }),
