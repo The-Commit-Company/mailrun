@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Newsletter } from '@/types/Newsletter'
 import { ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { DesignSheet } from './DesignSheet'
 
 interface NewsletterHeaderProps {
     newsletter?: Newsletter
@@ -10,12 +11,13 @@ interface NewsletterHeaderProps {
 export const NewsletterHeader = ({ newsletter }: NewsletterHeaderProps) => {
     return (
         <div className='fixed w-screen flex h-14 justify-between bg-gray-950 p-2 items-center'>
-            <div className='absolute left-2'>
+            <div className='flex gap-2 absolute left-2'>
                 <Button variant='link' asChild size='icon'>
                     <Link to='/newsletters'>
                         <ArrowLeft className='h-5 w-5 text-gray-300' />
                     </Link>
                 </Button>
+                <DesignSheet />
             </div>
             <div className='text-center w-screen'>
                 <h1 className='text-sm font-medium text-gray-200 text-center'>{newsletter?.subject ?? "Untitled"}</h1>
