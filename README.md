@@ -4,7 +4,8 @@ Frappe app to create, send, and manage newsletters + write and manage blog posts
 
 ### OSSHack
 
-Loom link: https://www.loom.com/share/ad97a9b6669744088c70aab565e5f1b6?sid=fd3f387c-19bd-488e-ae01-fac1b76e9d4d
+[Loom link](https://www.loom.com/share/ad97a9b6669744088c70aab565e5f1b6?sid=fd3f387c-19bd-488e-ae01-fac1b76e9d4d)
+
 This project was started during [OSSHack](https://osshack.com) to simplify marketing features which are available in [Frappe framework](https://frappeframework.com).
 
 Things that work: list views with skeleton loaders and errpr states, Tiptap editor with in-line formatting (bubble menu) and Slash commands. 
