@@ -12,5 +12,5 @@ export const PageHeader = ({ children }: PropsWithChildren) => {
 
 export const PageHeading = ({ children }: PropsWithChildren) => {
 
-    return <h1 className="text-3xl">{children}</h1>
+    return <h1 className="text-3xl cal-sans">{children}</h1>
 }

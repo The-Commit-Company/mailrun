@@ -30,6 +30,16 @@
     --radius: 0.5rem;
 
     --display-font: 'Cal Sans', system-ui;
+
+    --highlight-default: #ffffff;
+    --highlight-purple: #f6f3f8;
+    --highlight-red: #fdebeb;
+    --highlight-yellow: #fbf4a2;
+    --highlight-blue: #c1ecf9;
+    --highlight-green: #acf79f;
+    --highlight-orange: #faebdd;
+    --highlight-pink: #faf1f5;
+    --highlight-gray: #f1f1ef;
   }
 
   .dark {
@@ -52,6 +62,16 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9;
+
+    --highlight-default: #000000;
+    --highlight-purple: #3f2c4b;
+    --highlight-red: #5c1a1a;
+    --highlight-yellow: #5c4b1a;
+    --highlight-blue: #1a3d5c;
+    --highlight-green: #1a5c20;
+    --highlight-orange: #5c3a1a;
+    --highlight-pink: #5c1a3a;
+    --highlight-gray: #3a3a3a;
   }
 }
 
@@ -67,14 +87,5 @@
 }
 
 .cal-sans {
-  font-family: 'Cal Sans', system-ui;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   font-family: var(--display-font);
 }

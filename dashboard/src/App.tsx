@@ -11,6 +11,8 @@ import { FullPageLoader } from './components/ui/full-page-loader';
 import { UserProvider } from './lib/UserProvider';
 import { Newsletters } from './pages/Newsletters';
 import { MainPage } from './MainPage';
+import { NewsletterEditor } from './pages/NewsletterEditor';
+import { Toaster } from 'sonner';
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -19,6 +21,7 @@ const router = createBrowserRouter(
 			<Route element={<MainPage />} >
 				<Route path='newsletters' element={<Newsletters />} />
 			</Route>
+			<Route path='newsletters/:id' element={<NewsletterEditor />} />
 			{/* </Route> */}
 		</>
 	), {
@@ -35,7 +38,7 @@ function App() {
 				socketPort={import.meta.env.VITE_SOCKET_PORT ? import.meta.env.VITE_SOCKET_PORT : undefined}>
 				<UserProvider>
 					<RouterProvider router={router} fallbackElement={<FullPageLoader className='w-screen' />} />
-					{/* <Toaster /> */}
+					<Toaster />
 				</UserProvider>
 			</FrappeProvider>
 		</ThemeProvider>
