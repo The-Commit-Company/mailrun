@@ -6,7 +6,7 @@ export const MainPage = () => {
     return (
         <div className="flex">
             <Sidebar />
-            <div className="p-2 ml-[var(--sidebar-width)]">
+            <div className="p-4 ml-[var(--sidebar-width)] w-screen">
                 <Outlet />
             </div>
         </div>
