@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --sidebar-width: 16rem;
+}
 
 @layer base {
   :root {
@@ -25,6 +28,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
+
+    --display-font: 'Cal Sans', system-ui;
   }
 
   .dark {
@@ -59,4 +64,18 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.cal-sans {
+  font-family: 'Cal Sans', system-ui;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--display-font);
 }

@@ -1,26 +1,25 @@
-import './App.css'
+import 'cal-sans'
 import { ThemeProvider } from "@/components/theme-provider"
 import { FrappeProvider } from 'frappe-react-sdk'
 import {
 	createBrowserRouter,
 	createRoutesFromElements,
-	// Route,
+	Route,
 	RouterProvider,
 } from "react-router-dom";
 import { FullPageLoader } from './components/ui/full-page-loader';
 import { UserProvider } from './lib/UserProvider';
+import { Newsletters } from './pages/Newsletters';
+import { MainPage } from './MainPage';
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<>
-			{/* <Route path="/" element={<ProtectedRoute />}>
-		  <Route index element={<ChannelRedirect />} />
-		  <Route path="channel" element={<MainPage />} >
-			<Route index element={<ChannelRedirect />} />
-			<Route path="saved-messages" lazy={() => import('./components/feature/saved-messages/SavedMessages')} />
-			<Route path=":channelID" lazy={() => import('@/pages/ChatSpace')} />
-		  </Route>
-		</Route> */}
+			{/* <Route path="/" element={<ProtectedRoute />}> */}
+			<Route element={<MainPage />} >
+				<Route path='newsletters' element={<Newsletters />} />
+			</Route>
+			{/* </Route> */}
 		</>
 	), {
 	basename: `/${import.meta.env.VITE_BASE_NAME}` ?? '',
