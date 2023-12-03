@@ -4,6 +4,7 @@ import { FrappeProvider } from 'frappe-react-sdk'
 import {
 	createBrowserRouter,
 	createRoutesFromElements,
+	Navigate,
 	Route,
 	RouterProvider,
 } from "react-router-dom";
@@ -13,13 +14,22 @@ import { Newsletters } from './pages/Newsletters';
 import { MainPage } from './MainPage';
 import { NewsletterEditor } from './pages/NewsletterEditor';
 import { Toaster } from 'sonner';
+import { Categories } from './pages/Categories';
+import { Authors } from './pages/Authors';
+import { Audience } from './pages/Audience';
+import { Posts } from './pages/Posts';
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<>
 			{/* <Route path="/" element={<ProtectedRoute />}> */}
 			<Route element={<MainPage />} >
+				<Route index element={<Navigate to='/newsletters' />} />
+				<Route path='audience' element={<Audience />} />
 				<Route path='newsletters' element={<Newsletters />} />
+				<Route path='posts' element={<Posts />} />
+				<Route path='categories' element={<Categories />} />
+				<Route path='authors' element={<Authors />} />
 			</Route>
 			<Route path='newsletters/:id' element={<NewsletterEditor />} />
 			{/* </Route> */}

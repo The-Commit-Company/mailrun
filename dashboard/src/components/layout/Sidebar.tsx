@@ -8,7 +8,7 @@ export const Sidebar = () => {
         <nav className="fixed left-0 top-0 h-screen w-[var(--sidebar-width)]
         bg-slate-50 dark:bg-slate-900">
             <div className="flex flex-col justify-between h-full">
-                <div className="flex flex-col gap-4 p-2">
+                <div className="flex flex-col gap-4 p-2 pt-3">
                     <div>
                         <span className="cal-sans text-2xl pl-1.5">mailrun</span>
                     </div>

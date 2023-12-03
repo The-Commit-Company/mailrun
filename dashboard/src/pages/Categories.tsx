@@ -7,29 +7,28 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { convertFrappeDateStringToTimeAgo } from "@/lib/dates"
 import { useFrappeGetDocList } from "frappe-react-sdk"
 import { Plus } from "lucide-react"
-import { Link } from "react-router-dom"
 
-export const Newsletters = () => {
+export const Categories = () => {
     return (
         <div className="flex flex-col gap-2">
             <PageHeader>
-                <PageHeading>Newsletters</PageHeading>
+                <PageHeading>Categories</PageHeading>
                 <div className="flex items-center space-x-2">
-                    <Button size='sm'>
+                    <Button size={'sm'}>
                         <Plus size={16} className="mr-2 h-4 w-4" />
-                        Create email
+                        Create category
                     </Button>
                 </div>
             </PageHeader>
-            <NewslettersList />
+            <CategoriesList />
         </div>
     )
 }
 
-const NewslettersList = () => {
+const CategoriesList = () => {
 
-    const { data, isLoading, error } = useFrappeGetDocList('Newsletter', {
-        fields: ['name', 'subject', 'modified', 'email_sent', 'creation', 'owner'],
+    const { data, isLoading, error } = useFrappeGetDocList('Blog Category', {
+        fields: ['name', 'title', 'modified', 'published', 'creation', 'owner'],
         orderBy: {
             field: 'modified',
             order: 'desc'
@@ -53,8 +52,8 @@ const NewslettersList = () => {
         {isLoading && <TableLoader columns={3} />}
         {data && <TableBody>
             {data.map(doc => <TableRow key={doc.name}>
-                <TableCell className="hover:underline underline-offset-2"><Link to={doc.name}>{doc.subject}</Link></TableCell>
-                <TableCell>{doc.email_sent ? <Badge variant='success'>Sent</Badge> : <Badge variant='secondary'>Draft</Badge>}</TableCell>
+                <TableCell className="hover:underline underline-offset-2">{doc.title}</TableCell>
+                <TableCell>{doc.published ? <Badge variant='success'>Published</Badge> : <Badge variant='secondary'>Not Published</Badge>}</TableCell>
                 <TableCell className="text-muted-foreground">{convertFrappeDateStringToTimeAgo(doc.creation)}</TableCell>
             </TableRow>)}
         </TableBody>}
