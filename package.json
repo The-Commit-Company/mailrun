@@ -4,7 +4,7 @@
   "description": "Frappe app to manage newsletters",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd dashboard && yarn install",
     "dev": "cd dashboard && yarn dev",
     "build": "cd dashboard && yarn build"
   },
